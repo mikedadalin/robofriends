@@ -5,7 +5,7 @@ import Scroll from '../components/Scroll';
 import ErrorBoundary from '../components/ErrorBoundary';
 import './App.css';
 import { connect } from 'react-redux';
-import { setSearchField } from '../actions'
+import { setSearchField, requestRobots } from '../actions'
 
 const mapStateToProps = (state) => {
   return {
