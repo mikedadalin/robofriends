@@ -9,13 +9,16 @@ import { setSearchField } from '../actions'
 
 const mapStateToProps = (state) => {
   return {
-    searchField: state.searchField // the store is created from reducer (in index.js)
+    searchField: state.searchRobots.searchField, // the store is created from reducer (in index.js)
+    robots: state.requestRobots.robots,
+    isPending: state.requestRobots.isPending,
+    error: state.requestRobots.error
   }
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+    onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
   }
 };
 
